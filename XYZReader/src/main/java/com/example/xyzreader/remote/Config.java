@@ -9,7 +9,9 @@ public class Config {
     static {
         URL url = null;
         try {
-            url = new URL("https://dl.dropboxusercontent.com/u/231329/xyzreader_data/data.json" );
+            // TODO: Temporary json. Must find a new one.
+            // TODO: Must fix error when using old https://dl.dropboxusercontent.com/u/231329/xyzreader_data/data.json
+            url = new URL("https://raw.githubusercontent.com/Protino/dump/master/Lego/data.json" );
         } catch (MalformedURLException ignored) {
             // TODO: throw a real error
         }
