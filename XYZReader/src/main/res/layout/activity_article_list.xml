@@ -15,10 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:paddingBottom="6dp"
+            android:paddingBottom="@dimen/list_bottom_margin"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingTop="6dp"
+            android:paddingTop="@dimen/list_top_margin"
             android:scrollbarStyle="outsideOverlay"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
@@ -32,8 +32,6 @@
             android:id="@+id/main.collapsing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
 
             <android.support.v7.widget.Toolbar
@@ -51,7 +49,6 @@
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/logo"/>
             </android.support.v7.widget.Toolbar>
-
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 </android.support.design.widget.CoordinatorLayout>
