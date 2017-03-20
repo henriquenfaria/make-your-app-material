@@ -9,4 +9,7 @@
 
     <string name="up">Up</string>
 
+    <string name="no_connection">No connection</string>
+    <string name="retry">Retry</string>
+    <string name="an_error_has_occurred">An error has occurred</string>
 </resources>
