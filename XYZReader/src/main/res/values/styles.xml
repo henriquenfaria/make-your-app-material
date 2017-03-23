@@ -23,7 +23,6 @@
         <item name="colorAccent">@color/theme_accent</item>
     </style>
 
-
     <style name="ArticleTitle"  parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">@color/article_title</item>
         <item name="android:textSize">@dimen/detail_title_text_size</item>
