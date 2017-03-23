@@ -17,10 +17,15 @@
 
 <resources>
     <!-- TODO: Remove it later -->
-    <color name="photo_placeholder">#ccc</color>
+    <color name="photo_placeholder">#CCCC</color>
 
     <color name="theme_primary">#FF5722</color>
     <color name="theme_primary_dark">#E64A19</color>
     <color name="theme_primary_light">#FF8A65</color>
     <color name="theme_accent">#00BFA5</color>
+
+    <color name="article_title">#FFFF</color>
+    <color name="article_subtitle">#6000</color>
+    <color name="article_byline">#8FFF</color>
+
 </resources>

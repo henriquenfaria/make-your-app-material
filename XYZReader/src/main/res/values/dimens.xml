@@ -23,4 +23,8 @@
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="list_article_title_padding">10dp</dimen>
+    <dimen name="list_article_subtitle_padding">10dp</dimen>
+    <dimen name="list_card_view_margin">4dp</dimen>
+    <dimen name="list_card_view_corner_radius">4dp</dimen>
 </resources>

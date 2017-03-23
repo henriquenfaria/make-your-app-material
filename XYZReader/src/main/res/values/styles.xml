@@ -16,9 +16,30 @@
 -->
 
 <resources>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="colorAccent">@color/theme_accent</item>
+    </style>
+
+
+    <style name="ArticleTitle"  parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/article_title</item>
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ArticleByline"  parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/article_byline</item>
+    </style>
+
+    <style name="ArticleSubtitle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/article_subtitle</item>
+    </style>
+
+    <style name="ArticleBody"  parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColorLink">@color/theme_accent</item>
+        <item name="android:textSize">@dimen/detail_body_text_size</item>
     </style>
 </resources>
