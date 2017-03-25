@@ -23,13 +23,16 @@
         <item name="colorAccent">@color/theme_accent</item>
     </style>
 
-    <style name="ArticleTitle"  parent="TextAppearance.AppCompat.Large">
+    <style name="DetailsActivityTheme" parent="AppTheme">
+    </style>
+
+    <style name="ArticleTitle" parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">@color/article_title</item>
         <item name="android:textSize">@dimen/detail_title_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="ArticleByline"  parent="TextAppearance.AppCompat.Caption">
+    <style name="ArticleByline" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/article_byline</item>
     </style>
 
@@ -37,7 +40,7 @@
         <item name="android:textColor">@color/article_subtitle</item>
     </style>
 
-    <style name="ArticleBody"  parent="TextAppearance.AppCompat.Medium">
+    <style name="ArticleBody" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColorLink">@color/theme_accent</item>
         <item name="android:textSize">@dimen/detail_body_text_size</item>
     </style>
