@@ -98,6 +98,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
         android:contentDescription="@string/action_share"
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"

@@ -93,10 +93,12 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
             getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getActivityCast().getSupportActionBar().setDisplayShowTitleEnabled(false);
             getActivityCast().getSupportActionBar().setLogo(R.drawable.logo);
+            mToolbar.setLogoDescription(R.string.app_name);
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     getActivity().onBackPressed();
+
                 }
             });
         }
@@ -154,6 +156,7 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                mPhotoView.setContentDescription(titleView.getText());
                                 mRootView.findViewById(R.id.meta_bar)
                                         .setBackgroundColor(mMutedColor);
                             }

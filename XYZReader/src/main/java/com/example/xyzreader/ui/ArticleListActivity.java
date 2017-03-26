@@ -54,6 +54,7 @@ public class ArticleListActivity extends AppCompatActivity implements
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             getSupportActionBar().setLogo(R.drawable.logo);
+            mToolbar.setLogoDescription(R.string.app_name);
             mToolbar.setNavigationIcon(null);
         }
 
