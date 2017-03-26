@@ -102,26 +102,32 @@ public class ArticleDetailFragment extends Fragment implements
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
         mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
 
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //TODO: Do the same for list activity?
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setLogo(R.drawable.logo);
+        if (mToolbar != null) {
+            ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+            ((AppCompatActivity) getActivity()).getSupportActionBar()
+                    .setDisplayHomeAsUpEnabled(true);
+            ((AppCompatActivity) getActivity()).getSupportActionBar()
+                    .setDisplayShowTitleEnabled(false);
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setLogo(R.drawable.logo);
 
-        // TODO: Fix me?
-        /*
-        Use this instead?
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    startActivity(new Intent(getContext(), ArticleListActivity.class).addFlags
-                    (Intent.FLAG_ACTIVITY_NO_HISTORY));
-                }
-         */
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
+            // TODO: Fix me?
+            /*
+            Use this instead?
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        startActivity(new Intent(getContext(), ArticleListActivity.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY));
             }
-        });
+            */
+
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getActivity().onBackPressed();
+                }
+            });
+
+        }
+
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
         mStatusBarColorDrawable = new ColorDrawable(0);

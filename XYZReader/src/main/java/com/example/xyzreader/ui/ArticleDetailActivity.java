@@ -26,9 +26,7 @@ public class ArticleDetailActivity extends AppCompatActivity
 
     private Cursor mCursor;
     private long mStartId;
-
     private long mSelectedItemId;
-
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
 
@@ -52,29 +50,26 @@ public class ArticleDetailActivity extends AppCompatActivity
                         ()));
         mPager.setPageMarginDrawable(new ColorDrawable(0x22000000));
 
+
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                                           @Override
-                                           public void onPageScrolled(int position, float
-                                                   positionOffset, int positionOffsetPixels) {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int
+                    positionOffsetPixels) {
+            }
 
-                                           }
+            @Override
+            public void onPageSelected(int position) {
+                if (mCursor != null) {
+                    mCursor.moveToPosition(position);
+                }
+                mSelectedItemId = mCursor.getLong(ArticleLoader.Query._ID);
+            }
 
-                                           @Override
-                                           public void onPageSelected(int position) {
-                                               if (mCursor != null) {
-                                                   mCursor.moveToPosition(position);
-                                               }
-                                               mSelectedItemId = mCursor.getLong(ArticleLoader
-                                                       .Query._ID);
-                                           }
+            @Override
+            public void onPageScrollStateChanged(int state) {
 
-                                           @Override
-                                           public void onPageScrollStateChanged(int state) {
-
-                                           }
-                                       }
-        );
-
+            }
+        });
 
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
