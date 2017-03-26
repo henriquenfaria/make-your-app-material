@@ -18,7 +18,7 @@ Libraries
 
 This project uses the following library:
 
-[OkHttp] (http://square.github.io/okhttp/)
+[OkHttp](http://square.github.io/okhttp)
 
 
 License
