@@ -9,7 +9,7 @@ Screens
 ------
 
 ![alt text](https://github.com/henriquenfaria/make-your-app-material/blob/master/art/phone_portrait_1.png "Phone Portrait 1")
-![alt text](https://github.com/henriquenfaria/make-your-app-material/master/art/phone_portrait_1.png "Phone Portrait 2")
+![alt text](https://github.com/henriquenfaria/make-your-app-material/blob/master/art/phone_portrait_2.png "Phone Portrait 2")
 ![alt text](https://github.com/henriquenfaria/make-your-app-material/blob/master/art/tablet_landscape_1.png "Tablet Landscape 1")
 
 
