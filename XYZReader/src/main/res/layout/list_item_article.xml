@@ -45,7 +45,7 @@
             android:maxLines="2"
             android:minLines="2"
             android:paddingBottom="@dimen/list_article_title_padding"
-            android:paddingLeft="@dimen/list_article_title_padding"
-            android:paddingRight="@dimen/list_article_title_padding"/>
+            android:paddingStart="@dimen/list_article_title_padding"
+            android:paddingEnd="@dimen/list_article_title_padding"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
