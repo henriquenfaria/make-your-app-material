@@ -43,13 +43,16 @@
         android:id="@+id/nested_scroll_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
         android:background="@color/cardview_light_background"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <com.example.xyzreader.ui.MaxWidthLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:maxWidth="@dimen/detail_card_max_width"
+            android:orientation="vertical"
+            app:elevation="@dimen/card_elevation">
 
             <LinearLayout
                 android:id="@+id/meta_bar"
@@ -87,8 +90,7 @@
                 android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"/>
-
-        </LinearLayout>
+        </com.example.xyzreader.ui.MaxWidthLinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton

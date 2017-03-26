@@ -26,6 +26,18 @@
     <style name="DetailsActivityTheme" parent="AppTheme">
     </style>
 
+
+
+    <style name="ListArticleTitle" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">@dimen/list_article_title_size</item>
+    </style>
+
+    <style name="ListArticleSubtitle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/list_article_subtitle</item>
+        <item name="android:textSize">@dimen/list_article_subtitle_size</item>
+    </style>
+
+
     <style name="ArticleTitle" parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">@color/article_title</item>
         <item name="android:textSize">@dimen/detail_title_text_size</item>
@@ -34,10 +46,6 @@
 
     <style name="ArticleByline" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/article_byline</item>
-    </style>
-
-    <style name="ArticleSubtitle" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textColor">@color/article_subtitle</item>
     </style>
 
     <style name="ArticleBody" parent="TextAppearance.AppCompat.Medium">

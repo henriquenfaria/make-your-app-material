@@ -3,12 +3,14 @@
     <dimen name="detail_title_text_size">42sp</dimen>
     <dimen name="detail_body_text_size">20sp</dimen>
     <dimen name="detail_photo_height">384dp</dimen>
-    <dimen name="detail_card_top_margin">384dp</dimen>
     <dimen name="detail_inner_horiz_margin">64dp</dimen>
     <dimen name="detail_metabar_vert_padding">32dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">8dp</dimen>
     <dimen name="detail_body_bottom_margin">96dp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
-
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- list -->
+    <dimen name="list_article_subtitle_size">22dp</dimen>
+    <dimen name="list_article_title_size">26dp</dimen>
 </resources>
