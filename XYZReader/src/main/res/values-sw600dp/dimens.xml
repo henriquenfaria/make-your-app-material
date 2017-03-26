@@ -10,5 +10,5 @@
     <dimen name="detail_body_bottom_margin">96dp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
 
-    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

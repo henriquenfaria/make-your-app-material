@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -43,18 +43,14 @@ public class ArticleDetailFragment extends Fragment implements
     private long mItemId;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
-    // private ObservableScrollView mScrollView;
-    // private DrawInsetsFrameLayout mDrawInsetsFrameLayout;
-    private ColorDrawable mStatusBarColorDrawable;
+    private FloatingActionButton mFab;
 
 
     private Toolbar mToolbar;
-    private int mTopInset;
-    // private View mPhotoContainerView;
+
     private ImageView mPhotoView;
-    private int mScrollY;
     private boolean mIsCard = false;
-    private int mStatusBarFullOpacityBottom;
+
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -128,10 +124,9 @@ public class ArticleDetailFragment extends Fragment implements
 
         }
 
-
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
-        mStatusBarColorDrawable = new ColorDrawable(0);
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+        mFab = (FloatingActionButton) mRootView.findViewById(R.id.share_fab);
+        mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
@@ -141,7 +136,6 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-        bindViews();
         return mRootView;
     }
 
@@ -187,7 +181,7 @@ public class ArticleDetailFragment extends Fragment implements
 
                         @Override
                         public void onErrorResponse(VolleyError volleyError) {
-
+                            volleyError.printStackTrace();
                         }
                     });
         } else {
