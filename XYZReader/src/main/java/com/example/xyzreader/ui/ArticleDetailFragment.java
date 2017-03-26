@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -32,25 +31,19 @@ import com.example.xyzreader.data.ArticleLoader;
  * either contained in a {@link ArticleListActivity} in two-pane mode (on
  * tablets) or a {@link ArticleDetailActivity} on handsets.
  */
-public class ArticleDetailFragment extends Fragment implements
-        LoaderManager.LoaderCallbacks<Cursor> {
+public class ArticleDetailFragment extends Fragment implements LoaderManager
+        .LoaderCallbacks<Cursor> {
+
     private static final String TAG = "ArticleDetailFragment";
-
     public static final String ARG_ITEM_ID = "item_id";
-    // private static final float PARALLAX_FACTOR = 1.25f;
-
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
     private FloatingActionButton mFab;
-
-
     private Toolbar mToolbar;
-
     private ImageView mPhotoView;
     private boolean mIsCard = false;
-
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -76,8 +69,6 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
-        //mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
-        //        R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
     }
 
@@ -91,7 +82,6 @@ public class ArticleDetailFragment extends Fragment implements
         getLoaderManager().initLoader(0, null, this);
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -99,29 +89,16 @@ public class ArticleDetailFragment extends Fragment implements
         mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
 
         if (mToolbar != null) {
-            ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-            ((AppCompatActivity) getActivity()).getSupportActionBar()
-                    .setDisplayHomeAsUpEnabled(true);
-            ((AppCompatActivity) getActivity()).getSupportActionBar()
-                    .setDisplayShowTitleEnabled(false);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setLogo(R.drawable.logo);
-
-            // TODO: Fix me?
-            /*
-            Use this instead?
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        startActivity(new Intent(getContext(), ArticleListActivity.class)
-                        .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY));
-            }
-            */
-
+            getActivityCast().setSupportActionBar(mToolbar);
+            getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getActivityCast().getSupportActionBar().setDisplayShowTitleEnabled(false);
+            getActivityCast().getSupportActionBar().setLogo(R.drawable.logo);
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     getActivity().onBackPressed();
                 }
             });
-
         }
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);

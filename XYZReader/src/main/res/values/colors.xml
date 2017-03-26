@@ -26,6 +26,5 @@
     <color name="article_title">#FFFF</color>
     <color name="article_subtitle">#6000</color>
     <color name="article_byline">#8FFF</color>
-    <color name="article_meta_bar">#3333</color>
-
+    <color name="article_meta_bar">#333333</color>
 </resources>

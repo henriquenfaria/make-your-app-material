@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/detail_photo_height"
                 android:scaleType="centerCrop"
+                android:src="@color/article_meta_bar"
                 app:layout_collapseMode="parallax"/>
 
             <android.support.v7.widget.Toolbar
