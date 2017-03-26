@@ -11,6 +11,6 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!-- list -->
-    <dimen name="list_article_subtitle_size">22dp</dimen>
-    <dimen name="list_article_title_size">26dp</dimen>
+    <dimen name="list_article_subtitle_size">20dp</dimen>
+    <dimen name="list_article_title_size">24dp</dimen>
 </resources>
