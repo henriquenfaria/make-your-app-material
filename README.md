@@ -1,7 +1,24 @@
-Stock Hawk
+Make Your App Material
 ======
 
 This is Make Your App Material project of Udacity's Android Developer Nanodegree.
+The purpose of this project is to redesign an app to follow the Material Design guidelines and translate a set of static design mocks to a living and breathing app.
+
+
+Screens
+------
+
+![alt text](https://github.com/henriquenfaria/make-your-app-material/blob/master/art/phone_portrait_1.png "Phone Portrait 1")
+![alt text](https://github.com/henriquenfaria/make-your-app-material/master/art/phone_portrait_1.png "Phone Portrait 2")
+![alt text](https://github.com/henriquenfaria/make-your-app-material/blob/master/art/tablet_landscape_1.png "Tablet Landscape 1")
+
+
+Libraries
+------
+
+This project uses the following library:
+
+[OkHttp] (http://square.github.io/okhttp/)
 
 
 License
