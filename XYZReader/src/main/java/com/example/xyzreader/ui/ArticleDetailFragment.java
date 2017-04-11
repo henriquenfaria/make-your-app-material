@@ -12,6 +12,7 @@ import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
@@ -34,8 +35,8 @@ import com.example.xyzreader.data.ArticleLoader;
 public class ArticleDetailFragment extends Fragment implements LoaderManager
         .LoaderCallbacks<Cursor> {
 
-    private static final String TAG = "ArticleDetailFragment";
     public static final String ARG_ITEM_ID = "item_id";
+    private static final String TAG = "ArticleDetailFragment";
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
@@ -43,7 +44,6 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
     private FloatingActionButton mFab;
     private Toolbar mToolbar;
     private ImageView mPhotoView;
-    private boolean mIsCard = false;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -60,6 +60,19 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
         return fragment;
     }
 
+    // The fromHtml(String source) method was deprecated in API Level 24.
+    // This helper method will select the appropriate method version based on API level.
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String html) {
+        Spanned result;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            result = Html.fromHtml(html);
+        }
+        return result;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +81,6 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
 
-        mIsCard = getResources().getBoolean(R.bool.detail_is_card);
         setHasOptionsMenu(true);
     }
 
@@ -135,8 +147,7 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
                             .getIntent(), getString(R.string.action_share)));
                 }
             });
-
-            bylineView.setText(Html.fromHtml(
+            bylineView.setText(fromHtml(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                             System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
@@ -144,7 +155,7 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager
                             + " by <font color='#ffffff'>"
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
                             + "</font>"));
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
+            bodyView.setText(fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader
                             .ImageListener() {
